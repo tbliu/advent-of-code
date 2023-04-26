@@ -1,3 +1,6 @@
-# Advent of Code
+# Competitive Programming
 
-Trying out https://adventofcode.com/ to play around with different languages.
+Dump of various competitive programing problems I've solved.
+- Advent of Code
+- Leetcode
+- Kaggle
