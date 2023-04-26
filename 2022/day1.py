@@ -10,12 +10,10 @@ def part1(data: List[str]):
 
     for row in data:
         if row.strip() == '':
-            if elf_calories > max_calories:
-                max_calories = elf_calories
+            max_calories = max(max_calories, elf_calories)
             elf_calories = 0
-            continue
-
-        elf_calories += int(row.strip())
+        else:
+            elf_calories += int(row.strip())
 
     print('part1 solution: ', max_calories)
     return max_calories
