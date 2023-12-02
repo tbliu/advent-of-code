@@ -21,6 +21,7 @@ def part1(data: List[str]):
             if first is not None and second is not None:
                 break
 
+            # Otherwise the loop condition fails before one of the numbers is set
             if first is None:
                 i += 1
             if second is None:
