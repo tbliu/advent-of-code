@@ -151,10 +151,6 @@ topo_sort(InEdges, OutEdges, Nodes, Queue, Visited, Acc) ->
         InEdges
     ),
 
-    % For each node B in A's outgoing edges (A in the queue),
-    %remove A from B's InEdges. Then add B to the queue if
-    % its new InEdges are empty
-   
     NewVisited = Visited ++ Queue,
     NextQueue = [X || X <- sets:to_list(Nodes), maps:get(X, NewInEdges, []) =:= [], not lists:member(X, NewVisited)],
     case lists:sort(NextQueue) =:= lists:sort(Queue) of
